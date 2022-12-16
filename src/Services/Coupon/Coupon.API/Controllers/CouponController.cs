@@ -1,4 +1,4 @@
-﻿namespace Coupon.API.Controllers
+namespace Coupon.API.Controllers
 {
     using System;
     using System.Net;
@@ -54,7 +54,7 @@
 
             var couponDto = _mapper.Translate(coupon);
 
-            // Add LogInformation call
+            _logger.LogInformation("Applying coupon {CouponCode}", code);
 
             return couponDto;
         }
